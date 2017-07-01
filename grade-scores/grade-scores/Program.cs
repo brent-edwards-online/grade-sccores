@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace grade_scores
+namespace GradeScores
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Sup?");
+#if DEBUG
+            Console.WriteLine("debug");
+#else
+            Console.WriteLine("release");
+#endif
+            Console.ReadKey();
         }
     }
 }
